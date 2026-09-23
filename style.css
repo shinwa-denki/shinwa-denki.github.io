@@ -286,7 +286,8 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 .for-text { font-size: 16px; line-height: 1.8; }
 .for-card:not(.for-card-dark) .for-text { color: var(--muted); }
 .for-more { margin-top: auto; padding-top: 8px; font-weight: 700; font-size: 15px; }
-.for-card-dark .tbd { color: var(--ink); }
+/* 試作版の黄色い下地の上でだけ濃い文字にする（draft を外したら白のまま＝紺の上で読める） */
+.draft .for-card-dark .tbd { color: var(--ink); }
 
 /* ---------- 個人のお客さま ---------- */
 .home { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -508,8 +509,9 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 }
 .contact-tel svg { width: .8em; height: .8em; fill: var(--ink); }
 .contact-hours { margin-top: 10px; font-size: 15px; }
-.contact .tbd { background: rgba(255, 255, 255, .45); }
-.contact .tbd::after { background: var(--ink); color: var(--volt); }
+/* 試作版のあいだだけ。draft を外したら白い下地も消す */
+.draft .contact .tbd { background: rgba(255, 255, 255, .45); }
+.draft .contact .tbd::after { background: var(--ink); color: var(--volt); }
 
 /* ---------- フッター ---------- */
 .site-footer {
@@ -553,7 +555,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   .header-tel { display: none; }
 
   .hero { padding: 28px 0 44px; }
-  .hero-art { max-width: 300px; }
+  .hero-art { max-width: 240px; }
   .hero-lead { font-size: 16px; }
   .hero-actions .btn { width: 100%; }
 
